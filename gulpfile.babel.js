@@ -22,6 +22,9 @@ import imagemin from 'gulp-imagemin';
 import pngquant from 'imagemin-pngquant';
 import runSequence from 'run-sequence';
 import ghPages from 'gulp-gh-pages';
+import url from 'url';
+import fs from 'fs';
+import historyApiFallback from 'connect-history-api-fallback';
 
 const paths = {
   bundle: 'app.js',
@@ -51,7 +54,8 @@ gulp.task('clean', cb => {
 gulp.task('browserSync', () => {
   browserSync({
     server: {
-      baseDir: './'
+      baseDir: './',
+      middleware: [ historyApiFallback() ]
     }
   });
 });
