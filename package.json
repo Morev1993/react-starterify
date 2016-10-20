@@ -26,6 +26,8 @@
     "babel": "inherit"
   },
   "scripts": {
+    "build": "gulp build",
+    "deploy": "gulp deploy",
     "test": "ava --tap | tap-nyan"
   },
   "author": "Maurizio Mangione",
