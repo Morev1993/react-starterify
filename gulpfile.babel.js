@@ -28,7 +28,7 @@ import historyApiFallback from 'connect-history-api-fallback';
 
 const paths = {
   bundle: 'app.js',
-  entry: 'src/Index.js',
+  entry: 'src/index.js',
   srcCss: 'src/**/*.scss',
   srcImg: 'src/images/**',
   srcLint: ['src/**/*.js', 'test/**/*.js'],
@@ -133,11 +133,11 @@ gulp.task('deploy', () => {
     .pipe(ghPages());
 });
 
-gulp.task('watch', cb => {
-  runSequence('clean', ['browserSync', 'watchTask', 'watchify', 'styles', 'lint', 'images'], cb);
-});
-
 gulp.task('build', cb => {
   process.env.NODE_ENV = 'production';
   runSequence('clean', ['browserify', 'styles', 'htmlReplace', 'images'], cb);
+});
+
+gulp.task('default', cb => {
+  runSequence('clean', ['browserSync', 'watchTask', 'watchify', 'styles', 'lint', 'images'], cb);
 });

@@ -26,10 +26,6 @@
     "babel": "inherit"
   },
   "scripts": {
-    "start": "npm run watch",
-    "watch": "gulp watch",
-    "build": "gulp build",
-    "deploy": "gulp deploy",
     "test": "ava --tap | tap-nyan"
   },
   "author": "Maurizio Mangione",
