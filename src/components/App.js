@@ -4,12 +4,12 @@ import { version } from '../../package.json';
 
 const App = ({ children }) => (
   <div>
-    <header>
-      <h1>React Starterify {version}</h1>
+    <header className="container">
+      <h1><Link to="/">Prototype {version}</Link></h1>
       <Link to="/about">About</Link>
       <Link to="/poweredby">Powered by</Link>
     </header>
-    <section>
+    <section className="container">
       {children || 'Welcome to React Starterify'}
     </section>
   </div>

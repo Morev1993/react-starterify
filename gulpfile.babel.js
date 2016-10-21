@@ -11,6 +11,7 @@ import rimraf from 'rimraf';
 import notify from 'gulp-notify';
 import browserSync, { reload } from 'browser-sync';
 import sourcemaps from 'gulp-sourcemaps';
+import sass from 'gulp-sass';
 import postcss from 'gulp-postcss';
 import rename from 'gulp-rename';
 import nested from 'postcss-nested';
@@ -93,6 +94,7 @@ gulp.task('browserify', () => {
 
 gulp.task('styles', () => {
   gulp.src(paths.srcCss)
+  .pipe(sass())
   .pipe(rename({ extname: '.css' }))
   .pipe(sourcemaps.init())
   .pipe(postcss([vars, extend, nested, autoprefixer, cssnano]))

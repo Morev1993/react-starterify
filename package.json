@@ -69,6 +69,7 @@
     "gulp-notify": "^2.2.0",
     "gulp-postcss": "^6.1.0",
     "gulp-rename": "^1.2.2",
+    "gulp-sass": "^2.3.2",
     "gulp-sourcemaps": "^2.0.0-alpha",
     "gulp-uglify": "^1.5.3",
     "imagemin-pngquant": "^5.0.0",
