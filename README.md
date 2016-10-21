@@ -2,7 +2,7 @@
 
 ##What's include?
 
-react, react-router with browser history, scss, browserfy
+react, react-router with browser history, scss, bootstrap-sass, browserify, es6
 
 
 ###development
